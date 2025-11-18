@@ -154,3 +154,101 @@ function reverse(str){
     }return invertido
 }
 console.log(reverse("Patatas"))
+
+
+//Obtener el mayor del array
+//Sin usar Math.max.
+
+function maxArray(arr){
+    let max = arr[0]
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i]>max){
+            max=arr[i]
+        }
+        
+    }
+    return max
+}
+console.log(maxArray([4,5,7,9,15]))
+
+//Filtrar pares
+//Devuelve un nuevo array con solo los números pares.
+
+function arrayPar(arr){
+    let par=[]
+
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i]%2===0){
+            par.push(arr[i])
+        }
+        
+    }
+    return par
+}
+console.log(arrayPar([4,5,6,7,22]))
+
+//sumar numeros de un array
+
+function sumar(arr){
+    let suma=0
+    for (let i = 0; i < arr.length; i++) {
+        suma=suma+arr[i]
+    }
+    return suma
+}
+console.log(sumar([4,5,6,10]))
+
+//multiplicar numeros de un array
+
+function multiplicarArray(arr){
+let multiplicacionTotal=1
+
+    for (let i = 0; i < arr.length; i++) {
+        multiplicacionTotal=multiplicacionTotal*arr[i]
+        
+    }
+    return multiplicacionTotal
+}
+console.log(multiplicarArray([2,5,4,1]))
+
+function dobleCadaNumero(arr){
+    let doble=[]
+
+    for (let i = 0; i < arr.length; i++) {
+        doble.push(arr[i]*2)
+        
+    }
+    return doble
+}
+console.log(dobleCadaNumero([2,4,5,8]))
+
+//Eliminar duplicados (nivel básico)
+function eliminarDuplicados(arr){
+    let resultado=[]
+
+for (let i = 0; i < arr.length; i++) {
+    if(!resultado.includes(arr[i])){
+        resultado.push(arr[i])
+    }
+    
+}
+return resultado
+}
+console.log(eliminarDuplicados([2,2,4,5,4,9,10,9]))
+
+// convertir array a mayusculas
+//dado un array de string deveolver todas en mayus
+
+
+function mayus(arr){
+let arrayFinal=[]
+
+for (let i= 0; i < arr.length; i++) {
+    arrayFinal.push(arr[i].toUpperCase())
+    
+}
+return arrayFinal
+}
+
+console.log(mayus(["hola","Hii","bye"]))
+
